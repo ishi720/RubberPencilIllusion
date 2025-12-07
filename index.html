@@ -1,0 +1,47 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラバー・ペンシル・イリュージョン</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ラバー・ペンシル・イリュージョン</h1>
+        <p class="description">鉛筆の端を指でつかんで水平に揺らすと、<br>まるでゴムのようにぐにゃぐにゃと曲がっているように見える錯覚</p>
+        
+        <div class="canvas-wrapper">
+            <canvas id="canvas" width="500" height="400"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>回転の振幅:</label>
+                <input type="range" id="rotationAmplitude" min="0" max="80" value="40" step="1">
+                <span class="value-display" id="rotationAmplitudeValue">40</span>
+            </div>
+
+            <div class="control-group">
+                <label>上下移動の振幅:</label>
+                <input type="range" id="verticalAmplitude" min="0" max="100" value="2" step="1">
+                <span class="value-display" id="verticalAmplitudeValue">2</span>
+            </div>
+            
+            <div class="control-group">
+                <label>振動の速度:</label>
+                <input type="range" id="speed" min="1" max="20" value="8" step="1">
+                <span class="value-display" id="speedValue">8</span>
+            </div>
+
+            <div class="control-group">
+                <label>支点の位置:</label>
+                <input type="range" id="pivot" min="0" max="100" value="20" step="1">
+                <span class="value-display" id="pivotValue">20</span>
+            </div>
+        </div>
+
+        <button id="toggleBtn">一時停止</button>
+    </div>
+</body>
+</html>
